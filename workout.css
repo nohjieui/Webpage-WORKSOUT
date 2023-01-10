@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{
+    font-family: 'Pretendard-Regular';
+}
+div{
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+.wrap{
+    width: 1903px;
+    height: 3290px;
+    margin: auto;
+}
+.wrap>div{width: 100%;}
+/* ------------------------- popup ------------------------- */
+#popup{
+    height: 36px;
+    background-color: black;
+    text-align: center;
+}
+#popup>a{
+    color: red;
+    text-decoration: none;
+    font-size: 12px;
+    /* font-weight: 600; */
+    line-height: 35px;
+}
+
+/* ------------------------- header ------------------------- */
+#header{height: 60px;  padding: 10px 32px;}
+#header>div{
+    height: 100%;
+    float: left;
+}
+/* header_1 */
+#header_1{width: 30%;}
+#head1{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+#head1>li{height: 100%;}
+#head1 a{
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+    /* font-weight: 600; */
+    line-height: 35px;
+}
+.h1{
+    margin: 0px 0px 0px 24px;
+}
+
+/* header_2 */
+#header_2{
+    width: 40%;
+}
+#header_2>a{
+    /* border: 1px solid blue; */
+    color: black;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 900;
+
+    display: flex;
+    justify-content: center;
+}
+
+/* header_3 */
+#header_3{width: 30%;}
+#head3{
+    /* border: 1px solid blue; */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+#head3>li{height: 100%;}
+#head3 button{
+    border: 0px solid;
+    background-color: white;
+    color: gray;
+}
+#head3 a{
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+    line-height: 35px;
+}
+.h3{
+    margin: 0px 0px 0px 24px;
+}
+
+
+
+/* ------------------------- navigator ------------------------- */
+#navigator{height: 36px;}
+#navi{
+    /* border: 1px solid blue; */
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+}
+#navi>li{
+    width: 5%;
+    height: 100%;
+    text-align: center;
+}
+#navi a{
+    /* border: 1px solid blue; */
+    text-decoration: none;
+    color: gray;
+    font-size: 12px;
+    /* font-weight: 600; */
+
+    line-height: 35px;
+}
+#navi a::after{
+    display:block;/*a요소를 블록 요소라고 선언*/
+    content: '';/*comtent안은 밑줄 디자인을 위해 비워두세요.*/
+    border-bottom: solid 1px black;
+    transform: scaleX(0);/*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+    transition: transform ease-in-out; /*변형 방식*/
+}
+#navi a:hover:after {
+    transform: scaleX(0.6);/*a 속성에 hover시 after를 기존 크기로 변경*/
+ }
+
+/* ------------------------- content ------------------------- */
+#content{height: 3100px;}
+#content>div{width: 100%;}
+/* content_img */
+#content_img{height: 3052px;}
+#content_img_1 img{
+    width: 458px;
+    height: 596px;
+}
+#content_img_1{
+    border: 1px solid blue;
+}
+
+
+/* content_more */
+#content_more{height: 48px;}
+
+/* ------------------------- footer ------------------------- */
+#footer{height: 58px;}
+#footer>div{
+    height: 100%;
+    float: left;
+    font-size: 12px;
+}
+/* footer_1 */
+#footer_1{width: 60%;}
+#footer_1>p{
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    color: gray;
+    padding: 10px 20px;
+}
+
+/* footer_2 */
+#footer_2{
+    width: 40%;
+    padding: 10px 200px;
+}
+#footer_2>a{
+    text-decoration: none;
+    color: gray;
+    /* font-weight: 600; */
+    margin: 10px;
+    vertical-align: middle;
+    
+}

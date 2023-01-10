@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 1903px;
+            height: 3290px;
+            margin: auto;
+        }
+        .wrap>div{width: 100%;}
+        /* -------------------- popup -------------------- */
+        #popup{height: 36px;}
+
+        /* -------------------- header -------------------- */
+        #header{height: 60px;}
+        #header>div{
+            height: 100%;
+            float: left;
+        }
+        #header_1{width: 30%;}
+        #header_2{width: 40%;}
+        #header_3{width: 30%;}
+
+        /* -------------------- navigator -------------------- */
+        #navigator{height: 36px;}
+
+        /* -------------------- content -------------------- */
+        #content{height: 3100px;}
+        #content>div{width: 100%;}
+        #content_img{height: 3052px;}
+        #content_more{height: 48px;}
+
+        /* -------------------- footer -------------------- */
+        #footer{height: 58px;}
+        #footer>div{
+            height: 100%;
+            float: left;
+        }
+        #footer_1{width: 60%;}
+        #footer_2{width: 40%;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="popup"></div>
+        <div id="header">
+            <div id="header_1"></div>
+            <div id="header_2"></div>
+            <div id="header_3"></div>
+        </div>
+        <div id="navigator"></div>
+        <div id="content">
+            <div id="content_img"></div>
+            <div id="content_more"></div>
+        </div>
+        <div id="footer">
+            <div id="footer_1"></div>
+            <div id="footer_2"></div>
+        </div>
+    </div>
+</body>
+</html>
