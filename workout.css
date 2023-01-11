@@ -160,32 +160,39 @@ div{
     transform: scaleX(0.6);/*a 속성에 hover시 after를 기존 크기로 변경*/
 }
 
-#navi>li>ul{
-    border: 1px solid blue;
-    list-style-type: none;
-    background-color: white;
-}
-
 /* menu_pan */
 .menu_pan{
     width: 100%;
     background: #fff;
     position: absolute;
-    left: 0;
-    top: 100;
-    z-index: 999;
-    padding-left: 300px;
+    padding-left: 600px;
     font-size: 12px;
-    /* display: none; */
-}
-.menu_category>div{
-    margin: 5px 0px;
 
+    display: none;
+}
+#seasonoff_title{
+    margin: 10px 40px;
+
+}
+#seasonoff_title a{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.menu_category{
+    float: left;
+    list-style-type: none;
+}
+.category{
+    margin: 20px 0px;
 }
 .category>a{
     text-decoration: none;
     color: gray;
 }
+
 
 
 
@@ -195,7 +202,7 @@ div{
 /* content_img */
 #content_img{
     height: 3052px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 0px 15px;
     margin: auto;
 }
