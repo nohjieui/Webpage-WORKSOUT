@@ -106,6 +106,8 @@ div{
     border: 0px solid;
     background-color: white;
     color: gray;
+    cursor: pointer;
+    font-size: 12px;
 }
 #head3 a{
     text-decoration: none;
@@ -114,7 +116,7 @@ div{
     line-height: 35px;
 }
 .h3{
-    margin: 0px 0px 0px 24px;
+    margin: 0px 0px 0px 24px;   
 }
 
 
@@ -133,6 +135,7 @@ div{
 
     display: flex;
     justify-content: center;
+    position: relative;
 }
 #navi>li{
     width: 5%;
@@ -140,11 +143,9 @@ div{
     text-align: center;
 }
 #navi a{
-    /* border: 1px solid blue; */
     text-decoration: none;
     color: gray;
     font-size: 12px;
-    /* font-weight: 600; */
 
     line-height: 35px;
 }
@@ -163,24 +164,30 @@ div{
     border: 1px solid blue;
     list-style-type: none;
     background-color: white;
+}
 
-    /* 평소에 가려주다가 마우스가 올라가는 순간 펼쳐지는 효과부여 1단계 */
+/* menu_pan */
+.menu_pan{
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 100;
+    z-index: 999;
+    padding-left: 300px;
+    font-size: 12px;
     /* display: none; */
-    /* display: flex; */
 }
-#navi>li>a:hover+ul{
-    /* 평소에 가려주다가 마우스가 올라가는 순간 펼쳐지는 효과부여 2단계 */
-    /* display: block; */
+.menu_category>div{
+    margin: 5px 0px;
+
 }
-#navi>li>ul:hover{
-     /* 서브메뉴에도 마우스가 올라갈 때 유지가 되게끔 속성 부여 3단계 */
-    /* display: block; */
+.category>a{
+    text-decoration: none;
+    color: gray;
 }
-#seasonoff{
-    /* width: 1903px; */
-    height: 500px;
-    
-}
+
+
 
 /* ------------------------- content ------------------------- */
 #content{height: 3100px;}
@@ -188,7 +195,8 @@ div{
 /* content_img */
 #content_img{
     height: 3052px;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
+    padding: 0px 15px;
     margin: auto;
 }
 #content_img_1 img{
@@ -245,6 +253,7 @@ div{
     border: 0px;
     font-size: 12px;
     color: gray;
+    cursor: pointer;
 }
 
 /* ------------------------- footer ------------------------- */
@@ -267,25 +276,40 @@ div{
 /* footer_2 */
 #footer_2{
     width: 40%;
-    padding: 10px 200px;
+    padding: 10px 10px 10px 330px;
 }
 #footer_2>a{
     text-decoration: none;
     color: gray;
     /* font-weight: 600; */
-    margin: 10px;
     vertical-align: middle;
-    
+}
+.f_text{  
+    margin: 10px;
+}
+#insta>img{
+    width: 16px;
+    height: 16px;
+    padding-left: 16px;
+}
+#face>img{
+    width: 10px;
+}
+#ut>img{
+    width: 13px;
+    height: 9px;
+}
+.f_img{
+    margin: 2px;
 }
 
 /* ------------------------- fiexd ------------------------- */
 #fiexd img{
     width: 50px;
-    height: 50px;
 }
 #fiexd{
     position: fixed;
-    left: 1820px;
+    left: 1840px;
     bottom: 50px;
 
 }
