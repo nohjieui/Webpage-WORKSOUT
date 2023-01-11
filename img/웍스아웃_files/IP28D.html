@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://service.iamport.kr/payments/ready/imp75761852/kcp/IP28D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+		<title>
+		Payments	</title>
+	<script type="text/javascript" src="./json3.min.js.다운로드"></script><script type="text/javascript" src="./jquery-1.10.2.min.js.다운로드"></script><script type="text/javascript">
+//<![CDATA[
+function m_Completepayment( FormOrJson, closeEvent )
+{
+var frm = document.forms["payForm"];
+
+/********************************************************************/
+/* FormOrJson은 가맹점 임의 활용 금지                               */
+/* frm 값에 FormOrJson 값이 설정 됨 frm 값으로 활용 하셔야 됩니다.  */
+/* FormOrJson 값을 활용 하시려면 기술지원팀으로 문의바랍니다.       */
+/********************************************************************/
+GetField( frm, FormOrJson );
+
+if( frm.res_cd.value == "0000" ) {
+frm.submit();
+} else {
+closeEvent();
+frm.submit();
+}
+}
+
+//]]>
+</script><script type="text/javascript" src="./payplus_web(1).jsp"></script><style type="text/css">                                                                                      .kcpTransDiv{                                                                                                filter:alpha(opacity=10); -khtml-opacity: 0.1; -moz-opacity: 0.1; opacity: 0.1; top:0px; left:0;         background-color:#000000; width:100%; height:100%; position:absolute; z-index:10000;                 }                                                                                                    </style>                                                                                                 <style type="text/css"></style><style>html,body,.payment-ui,#container,#content{height:100%}@media only screen and (min-device-width: 768px){.payment-ui{display:flex;justify-content:center;align-items:center}}body,button,input,select,table,textarea{font-family:-apple-system, BlinkMacSystemFont, Roboto, AppleSDGothicNeo-Regular, NanumBarunGothic, NanumGothic, "나눔고딕", "Segoe UI", Helveica, Arial, Malgun Gothic, Dotum, sans-serif;color:#222;margin:0}button{display:flex;justify-content:center;align-items:center;border:none;outline:none;background-color:transparent;cursor:pointer;font-size:14px;flex-shrink:0}.select{position:relative}.select select{width:100%;padding:0 24px;height:60px;border-radius:12px;border:solid 1px #000000;background-color:#ffffff;font-size:14px;font-weight:bold;outline:none;appearance:none;-webkit-appearance:none;cursor:pointer}.select select::-ms-expand{display:none}.select__message{display:flex;align-items:center;width:100%;padding:0 24px;border:solid 1px #eaebec;box-sizing:border-box;border-radius:12px;height:60px;font-size:14px;color:#8c8c8c}.select span{position:absolute;font-size:12px;top:50%;right:24px;transform:translateY(-50%);pointer-events:none}.iamport{display:flex;flex-direction:column;width:100%;position:relative;background-color:#fff;overflow-y:scroll;height:100%}.iamport::-webkit-scrollbar{width:3px}.iamport::-webkit-scrollbar-track{background:#f5f5f5;border-radius:4px}.iamport::-webkit-scrollbar-thumb{background:#d8d8d8}.iamport::-webkit-scrollbar-thumb:hover{background:#d8d8d8}@media only screen and (min-device-width: 768px){.iamport{height:800px;width:480px;max-height:90%}}.header{display:flex;justify-content:center;align-items:center;height:56px;font-size:18px;font-weight:800;position:relative;border-bottom:1px solid #f8f8f8;border-top-right-radius:4px;border-top-left-radius:4px;flex-shrink:0}.header button{position:absolute;top:50%;right:12px;padding:12px;transform:translateY(-50%)}.terms{padding:0 16px;display:flex;flex-direction:column;border-bottom:8px solid #f8f8f8;margin-bottom:16px;flex-shrink:0}@media only screen and (min-device-width: 768px){.terms{padding:0 69px}}.terms__header{display:flex;align-items:center;justify-content:space-between;height:62px}.terms__header button{font-size:16px;height:100%;transition:all 0.16s ease;padding:0}.terms__header button:first-child{flex:1;justify-content:flex-start;font-weight:800}.terms__header button:last-child{padding-left:33px}.terms__header button>div{display:flex;justify-content:center;align-items:center;width:16px;height:16px;border-radius:8px;background-color:#cccccc;color:#fff;font-size:10px;margin-right:8px;transition:all 0.16s ease}.terms__header--agreed button:last-child{color:#000}.terms__header--agreed button>div{background-color:#000}.terms__item{display:flex;justify-content:space-between;align-items:center;font-size:14px}.terms__item button{color:#8c8c8c}.terms__item button span{margin-right:8px}.terms__item button:first-child{padding:6px 12px 6px 0}.terms__item button:last-child{color:#bfbfbf;padding:6px 0 6px 12px;text-decoration:underline}.terms__item:last-child{padding-bottom:18px}.promotions{display:flex;flex-wrap:wrap;padding:0 16px;margin-bottom:16px;flex-shrink:0}@media only screen and (min-device-width: 768px){.promotions{padding:0 69px}}.promotions__desc{width:100%;font-size:14px;text-align:center;padding:12px 0;text-decoration:underline;cursor:pointer;margin-top:12px}.promotions__divider{width:100%;height:1px;background-color:#f8f8f8;margin-top:12px}.promotions .privacy{font-size:12px;margin-top:0}.promotions .privacy li{margin:5px 0;padding-left:11px;position:relative;word-break:keep-all}.promotions .privacy li:before{content:"-";text-indent:0px;position:absolute;top:-1px;left:-2px}.promotionCard{display:flex;flex-direction:column;justify-content:flex-end;padding:12px;width:calc(50% - 4px);height:88px;box-sizing:border-box;border-radius:12px;border:solid 1px #eaebec;margin-bottom:8px;cursor:pointer;position:relative}.promotionCard:nth-child(odd){margin-right:4px}.promotionCard:nth-child(even){margin-left:4px}.promotionCard__name{display:flex;align-items:center;font-size:14px;font-weight:bold;color:#202122;margin-bottom:1px}.promotionCard__discount{font-size:12px;font-weight:500;letter-spacing:-0.38px;color:#ff554a}.promotionCard__discount span{color:#8c8c8c;margin-left:2px}.promotionCard__logo{position:absolute;top:12px;right:12px}.nonPromotionCards{display:flex;flex-wrap:wrap;padding:0 16px;flex-shrink:0}@media only screen and (min-device-width: 768px){.nonPromotionCards{padding:0 69px}}.nonPromotionCards__showMore{width:100%;font-size:14px;margin:2px auto 12px auto;padding:12px 24px;text-decoration:underline}.nonPromotionCard{display:flex;align-items:center;justify-content:center;padding:12px;width:calc(50% - 4px);height:40px;box-sizing:border-box;border-radius:12px;border:solid 1px #eaebec;margin-bottom:8px;cursor:pointer;font-size:14px;font-weight:bold}.nonPromotionCard:nth-child(odd){margin-right:4px}.nonPromotionCard:nth-child(even){margin-left:4px}.nonPromotionCard__name{position:relative}.nonPromotionCard__name>div{position:absolute;top:1px;right:-20px}.cardDetail{padding:12px 16px;flex-shrink:0}@media only screen and (min-device-width: 768px){.cardDetail{padding:12px 69px}}.cardDetail__label{font-size:16px;font-weight:800;margin-bottom:24px}.cardDetail__card{position:relative;display:flex;align-items:center;height:60px;padding:0 24px;border-radius:12px;border:solid 1px #eaebec;background-color:#ffffff;font-size:14px;font-weight:bold;color:#202122;margin-bottom:8px}.cardDetail__card__discount{margin-left:12px}.cardDetail__card img{right:24px;top:50%;transform:translateY(-50%)}.cardDetail__reset{margin:12px auto 0 auto;padding:12px 24px;text-decoration:underline}.hyundai_mpoint_container{margin-top:20px}.hyundai_mpoint_container button{padding:0}.hyundai_mpoint_container button .anticon-check{padding:3px;border-radius:50%;margin-right:8px;font-weight:bold;color:#fff;font-size:12px}.hyundai_mpoint_container ul{margin:0;padding:15px 30px;background-color:#f8f8f8;font-size:14px;color:#aaaaaa;margin-top:5px}.footer{display:flex;flex-direction:column;background-color:#f8f8f8;padding:16px;flex:1}@media only screen and (min-device-width: 768px){.footer{justify-content:space-between;padding:16px 69px}}.footer__lineItem{display:flex;justify-content:space-between;margin-bottom:8px}.footer__lineItem>div{font-size:14px}.footer__lineItem>div:last-child span{font-weight:bold;font-style:italic}.footer__lineItem--strong>div{font-size:16px;font-weight:800}.footer__lineItem--strong>div:last-child{color:#ff554a}.footer__divider{width:100%;height:1px;background-color:#d9d9d9;margin:8px 0 16px 0}.footer__pay{height:50px;border-radius:8px;background-color:#000000;color:#fff;font-size:16px;margin:40px 0 56px 0}.footer__pay span{font-style:italic;font-weight:bold;margin-right:6px}.footer__pay:disabled{background-color:#e8e8e8}.interestFree{display:flex;justify-content:center;align-items:center;width:16px;height:16px;border-radius:8px;background-color:#000000;font-size:9px;font-weight:bold;color:#fff;margin-left:4px}.privacy{padding:16px;background-color:#f5f5f5;border-radius:4px;margin:12px 0 16px 0;height:182px;overflow-y:auto;font-size:14px;color:#8c8c8c}.privacy::-webkit-scrollbar{width:3px}.privacy::-webkit-scrollbar-track{background:#f5f5f5}.privacy::-webkit-scrollbar-thumb{background:#d8d8d8}.privacy::-webkit-scrollbar-thumb:hover{background:#d8d8d8}.privacy h2{font-size:16px;color:#8c8c8c;margin-bottom:5px;font-weight:bold}.privacy ul{list-style:none;margin:0;padding:0}.privacy ol{padding-left:24px}.privacy li{margin:5px 0}.privacy table,.privacy th,.privacy td{padding:10px;border:1px solid #8c8c8c;border-collapse:collapse;color:#8c8c8c}.modal{display:flex;justify-content:center;align-items:center;position:absolute;top:0;left:0;right:0;bottom:0}.modal__backdrop{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background-color:rgba(0,0,0,0.3);z-index:1}.modal__content{display:flex;flex-direction:column;justify-content:space-between;align-items:center;width:320px;height:201px;border-radius:16px;background-color:#ffffff;z-index:2;padding:40px;box-sizing:border-box;font-size:16px}.modal__content>div{text-align:center}.modal__content button{width:160px;height:51px;border-radius:25px;background-color:#000000;color:#fff;font-size:16px;font-weight:bold}.backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.6)}
+</style></head><body style=""><div id="kcp_content" style="background-color: white;"></div>                                           <div id="kcp_mask" class="kcpTransDiv" style="display:none"></div>                                       <div id="kcp_progress" class="spin_container"></div>                                                     <script type="text/javascript" src="./ajax.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./util.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./spin.min.js(2).다운로드"></script><script type="text/javascript" src="./payplus_webExe.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./web_cross_hub.js(1).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./kcp_jquery-1.8.0.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./kcp_jquery.blockUI.js(1).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./ClientDataHandler.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./json2.js(1).다운로드" charset="EUC-KR"></script><div id="kcp_event_form"></div><script type="text/javascript" src="./npayUtils.js(2).다운로드" charset="EUC-KR"></script><script type="text/javascript" src="./bundle.js(1).다운로드"></script>
+
+	<div id="container">
+		<div id="header">
+		</div>
+		<div id="content">
+
+			
+			<!-- UI 랜더링 할 타겟 -->
+<div id="app" class="payment-ui"></div>
+<script type="text/javascript">
+	(function (window) {
+		function usePromotionUI(userCode) {
+			return userCode == 'imp60973899'		// may.day@kreamcorp.com
+					|| userCode == 'imp90424005'	// iru@kreamcorp.com
+					|| userCode == 'imp26856381'	//
+					|| userCode == 'iamport_kcp'	//
+					|| userCode == 'imp79102206'	// johny@chai.finance
+					|| userCode == 'imp34532843'	// test.promo.sandbox@iamport.kr
+					|| userCode == 'imp46882305'	// test.promotion@iamport.kr
+					;
+		}
+
+		function isDirectCall(request) {
+			return request.pay_method == 'card' && request.card && request.card.direct && request.card.direct.code;
+		}
+
+		function getDirectCardInfo(request) {
+			if (!isDirectCall(request)) {
+				return {
+					code : '',
+					ispCode : '',
+					isISP : false
+				};
+			}
+
+			var standardCode = String(request.card.direct.code);
+
+			switch(standardCode) {
+				case '368': //롯데카드
+					return {
+						code : 'CCLO',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '367': //현대카드
+					return {
+						code : 'CCDI',
+						ispCode: '',
+						isISP : false
+					};
+
+				case '381': //KB카드(오류남)
+					return {
+						code : 'CCKM',
+						ispCode : 'KBC',
+						isISP : true
+					};
+
+				case '361': //BC카드(오류남)
+					return {
+						code : 'CCBC',
+						ispCode : '',
+						isISP : true
+					};
+
+				case '364': //광주카드(ISP인증)
+					return {
+						code : 'CCKJ',
+						ispCode : '',
+						isISP : true
+					};
+
+				case '365': //삼성카드
+					return {
+						code : 'CCSS',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '366': //신한카드
+					return {
+						code : 'CCLG',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '374': //하나카드
+					return {
+						code : 'CCHN',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '371': //NH카드
+					return {
+						code : 'CCNH',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '370': //씨티카드(안됨)
+					return {
+						code : 'CCCT',
+						ispCode : '',
+						isISP : false
+					};
+
+				case '372': //전북카드(ISP)
+					return {
+						code : 'CCJB',
+						ispCode : '',
+						isISP : true
+					};
+
+				case '373': //제주카드(ISP)
+					return {
+						code : 'CCCJ',
+						ispCode : 'JEJU',
+						isISP : true
+					};
+
+				case '002': //KDB산업은행카드(ISP)
+					return {
+						code : 'CCBC',
+						ispCode : 'KDB',
+						isISP : true
+					};
+
+				case '041': //우리카드
+					return {
+						code : 'CCPH',
+						ispCode : 'WR',
+						isISP : false
+					};
+
+				case '045': //새마을금고카드(ISP)
+					return {
+						code : 'CCSM',
+						ispCode : 'SM',
+						isISP : true
+					};
+
+				case '048': //신협카드(ISP)
+					return {
+						code : 'CCBC',
+						ispCode : 'SHJ',
+						isISP : true
+					};
+
+				case '369': //수협카드(ISP)
+					return {
+						code : 'CCCU',
+						ispCode : '',
+						isISP : true
+					};
+
+				case '089': //케이뱅크카드(ISP)
+					return {
+						code : 'CCBC',
+						ispCode : 'KBK',
+						isISP : true
+					};
+
+				case '090': //카카오뱅크카드
+					return {
+						code : 'CCKM',
+						ispCode : 'KA',
+						isISP : true
+					};
+
+				case '071': //우체국카드(ISP)
+					return {
+						code : 'CCPB',
+						ispCode : 'PT',
+						isISP : true
+					};
+			}
+
+			return {
+				code : '',
+				ispCode : '',
+				isISP : false
+			};
+		}
+
+		function getDirectQuota(request) {
+			if (!isDirectCall(request)) {
+				return 0;
+			}
+
+			var quota = request.card.direct.quota ? parseInt(request.card.direct.quota) : 0;
+			if ( request.amount < 50000 || isNaN(quota) ) quota = 0;
+
+			return quota;
+		}
+
+		function leftZeroPadding(value, length) {
+			var s = String(value);
+			var fillCount = length - s;
+
+			var arr = [];
+			for (var i=0; i++; i<fillCount) {
+				arr.push('0');
+			}
+
+			return arr.join('') + s;
+		}
+
+		function doDirectPay(formData, sandbox) {
+			var form = document.createElement('form');
+
+			form.name = form.id = 'directBridge';
+			form.method = 'post';
+			form.action = '/kcp_payments/direct_bridge/' + (sandbox ? 'sandbox':'production');
+			form.target = '_self';
+
+			for(var key in formData) {
+				var input = document.createElement('input');
+				input.type = 'hidden';
+				input.name = key;
+				input.value = formData[key];
+				form.appendChild(input);
+			}
+
+			document.body.appendChild(form);
+			form.submit();
+		}
+
+		function doPay(form, formData) {
+			for (var key in formData) {
+				if (typeof formData[key] != "undefined") { //값을 0으로 세팅하는 경우 허용해줘야 하므로 undefined 인지 체크
+					form.elements[key].value = formData[key];
+				}
+			}
+
+			try {
+				KCP_Pay_Execute(form);
+			} catch (e) {
+			}
+		}
+
+		function _response(action, data, source, origin) {
+			var msg = {
+				action: action,
+				data: data
+			};
+			var obj = JSON.stringify(msg); //받는 쪽에서 parse하므로 string이라도 stringify해서 넘김
+
+			source.postMessage(obj, '*');
+		}
+
+		function _bypass(formData, bypass) {
+			if (!bypass) return;
+
+			var allowed = ["skin_indx", "site_logo", "shop_user_id", "complex_pnt_yn", "pt_memcorp_cd"];
+
+			for (var i = allowed.length - 1; i >= 0; i--) {
+				var key = allowed[i];
+
+				if (typeof bypass[key] != "undefined") formData[key] = bypass[key];
+			}
+			;
+		}
+
+		function _pay_method(method) {
+			switch (method) {
+				case "card" :
+				case "payco" :
+				case "kakaopay" :
+				case "samsung" :
+				case "lpay" :
+				case "ssgpay" :
+					// case "naverpay_point" :
+					return "100000000000";
+
+				case "trans" :
+					return "010000000000";
+
+				case "vbank" :
+					return "001000000000";
+
+				case "phone" :
+					return "000010000000";
+
+				case "point" :
+					return "000100000000";
+
+				case "happymoney" :
+				case "cultureland" :
+				case "booknlife" :
+				case "smartculture" :
+					return "000000001000";
+			}
+
+			return "100000000000";
+		}
+
+		function _card_quota(display) {
+			var max = 0;
+
+			if (display && display.card_quota) {
+				for (var i = display.card_quota.length - 1; i >= 0; i--) {
+					max = Math.max(max, display.card_quota[i]);
+				}
+				;
+
+				return max;
+			}
+
+			return 12;
+		}
+
+		function _vbank_due(due) {
+			var def = {
+				"days": "",
+				"hhmmss": ""
+			};
+
+			if (typeof due == 'string') {
+				var s = due.replace(/\D/g, '');
+
+				if (s.length >= 14) {
+					def.days = Math.max(0, _diff_days(s.substr(0, 8)));
+					def.hhmmss = s.substr(8, 6);
+				} else if (s.length >= 8) {
+					var hhmmss = s.substr(8, 6);
+
+					if (hhmmss) { //zero fill
+						hhmmss = hhmmss + "000000".substr(0, 6 - hhmmss.length);
+					} else {
+						hhmmss = "235959";
+					}
+
+					def.days = Math.max(0, _diff_days(s.substr(0, 8)));
+					def.hhmmss = hhmmss;
+				}
+			}
+
+			return def;
+		}
+
+		function _diff_days(sTheDay, sBaseDay) {
+
+			function _parse(str) {
+				return {
+					"year": parseInt(str.substr(0, 4)),
+					"month": parseInt(str.substr(4, 2)),
+					"day": parseInt(str.substr(6, 2))
+				}
+			}
+
+			var the = _parse(sTheDay),
+					theDay = new Date(the.year, the.month - 1, the.day);
+
+			if (sBaseDay) {
+				var base = _parse(sBaseDay),
+						baseDay = new Date(base.year, base.month - 1, base.day);
+			} else {
+				var baseDay = new Date();
+				baseDay.setHours(0);
+				baseDay.setMinutes(0);
+				baseDay.setSeconds(0);
+				baseDay.setMilliseconds(0);
+			}
+
+			return (theDay.getTime() - baseDay.getTime()) / (60 * 60 * 24 * 1000);
+		}
+
+		function escrowProductInfo(kcpProducts) {
+			if (!kcpProducts || kcpProducts.length == 0) return false;
+
+			var itemSep = String.fromCharCode(30);	// ASCII 코드값 30
+			var unitSep = String.fromCharCode(31);	// ASCII 코드값 31
+
+			var count = kcpProducts.length;
+			var sArr = [];
+			for (var i = 0; i < count; i++) {
+				var product = kcpProducts[i],
+						s = "";
+
+				s += (unitSep + "seq=" + (i + 1));
+				s += (unitSep + "ordr_numb=" + product.orderNumber);
+				s += (unitSep + "good_name=" + product.name);
+				s += (unitSep + "good_cntx=" + product.quantity);
+				s += (unitSep + "good_amtx=" + product.amount);
+
+				sArr.push(s)
+			}
+			;
+
+			return {
+				"good_info": sArr.join(itemSep),
+				"bask_cntx": count
+			}
+		}
+
+		function _currency(currency) {
+			if (typeof currency == 'string') {
+				var c = currency.toUpperCase();
+				if (c == 'USD') {
+					return 'USD';
+				}
+			}
+
+			return 'WON';
+		}
+
+		function _used_ticket(method) {
+			switch (method) {
+				case "cultureland":
+					return "SCCL"
+				case "happymoney":
+					return "SCHM"
+				case "booknlife":
+					return "SCBL"
+				case "smartculture":
+					return "SCGM"
+			}
+			return ""
+		}
+
+		function callAppCard(request) {
+			// PC일때 app_flag(= '', 'Y', 'N')에 따라서 결제창이 변경
+			if ( request.bypass && request.bypass.app_flag !== undefined){
+				return request.bypass.app_flag;
+			}
+
+			if( request.appCard) {
+				return 'Y';
+			}
+
+			if (isDirectCall(request)) {
+				if (request.card.direct.code == '381') { //KB카드일 때에만(PC는 S모드가 지원되지 않음)
+					return 'Y';
+				}
+				else if (request.card.direct.code == '090') { // PP-55: 카카오뱅크 프렌즈 체크카드의 경우, app카드 사용하지 않음
+					return 'N';
+				}
+			}
+			return '';
+		}
+
+		function on_message(e) {
+			var obj = {},
+					action = null,
+					data = null,
+					request_id = null;
+			var source = e.source;
+			var origin = e.origin;
+
+			try {
+				obj = JSON.parse(e.data);
+				action = obj.action;
+				data = obj.data || {};
+				request_id = data.request_id;
+				origin = obj.origin || origin;
+			} catch (e) {
+			}
+
+			if (action == 'payment') {
+				var custom_data = JSON.stringify(data.custom_data);
+
+				var payRequestData = {
+					channel: 'pc',
+					provider: 'kcp',
+					pay_method: data.pay_method, //service DB에는 원본
+					escrow: data.escrow,
+					amount: data.amount,
+					currency: data.currency,
+					vat: data.vat,
+					tax_free: data.tax_free,
+					name: data.name,
+					merchant_uid: data.merchant_uid,
+					user_code: 'imp75761852',
+					tier_code: data.tier_code,
+					pg_id: 'IP28D',
+					buyer_name: data.buyer_name,
+					buyer_email: data.buyer_email,
+					buyer_tel: data.buyer_tel,
+					buyer_addr: data.buyer_addr,
+					buyer_postcode: data.buyer_postcode,
+					customer_uid: data.customer_uid,
+					origin: origin,
+					custom_data: custom_data,
+					notice_url: data.notice_url,
+					confirm_url: data.confirm_url,
+					vbank_due: data.vbank_due,
+					card: data.card,
+					isPromotion: data.isPromotion === undefined ? true : data.isPromotion,
+					promotion_id: data.promotion_id
+				};
+
+				var prepareAjaxHandler = function (payRequestData, data, resolveHandler) {
+					$.ajax({
+						type: 'POST',
+						url: '/kcp_payments/prepare.json',
+						dataType: 'json',
+						data: payRequestData,
+						error: function (xhr, status, err) {
+							return _response('', {
+								success: false,
+								request_id: request_id,
+								imp_uid: null,
+								merchant_uid: data.merchant_uid,
+								error_code: 'HTTP_ERROR:' + xhr.status,
+								error_msg: '결제 시작을 위해 서버와 통신하는 중 에러가 발생하였습니다'
+							}, source, origin);
+						}
+					}).done(function (rsp) {
+						if (rsp.code == 0) {
+							if (isDirectCall(data)) {
+								var directCardInfo = getDirectCardInfo(data);
+
+								var targetUrl = "https://service.iamport.kr/kcp_payments/direct/imp75761852/" + rsp.data.imp_uid + "/" + request_id + "?card=" + payRequestData.card.direct.code;
+								var quotaString = leftZeroPadding(getDirectQuota(data), 2);
+								var formData = {
+									//common
+									'imp_uid': rsp.data.imp_uid,
+									'request_id': request_id,
+									'user_code': "imp75761852",
+									'card_pay_method' : directCardInfo.isISP ? 'ISP' : 'V3D',
+									'site_cd': rsp.data.pg_id,
+									'card_code' : directCardInfo.code,
+									'issue_code' : directCardInfo.ispCode,
+									'site_name': data.company || "iamport",
+									'site_midx' : 'PGNW', //고정값
+									'term_idxx' : rsp.data.pg_id + 'V',
+									'card_mony' : rsp.data.amount,
+									'escw_used' : data.escrow ? 'Y':'N',
+									'quota' : quotaString,
+									'inst_term' : quotaString,
+									'KVP_QUOTA_INF' : quotaString,
+									'KVP_NOINT_INF' : 'NONE',
+									'app_flag' : callAppCard(data),
+									'ret_url' : targetUrl,
+									'pay_method' : 'CARD',
+									'ordr_idxx' : rsp.data.use_self_order_id ? data.merchant_uid : rsp.data.imp_uid,
+									'good_name' : data.name,
+									'good_mny' : rsp.data.amount,
+									'buyr_name' : data.buyer_name,
+									'buyr_mail' : data.buyer_email,
+									'buyr_tel1' : data.buyer_tel,
+									'buyr_tel2' : data.buyer_tel,
+									'req_tx' : 'pay',
+									'currency' : '410',
+									'quotaopt' : '12',
+									'enc_type' : 'NO',
+									'layer_overlay_view' : 'Y',
+									'res_cd' : '',
+									'res_msg' : '',
+									'kcp_noint' : '',
+									'kvp_quota' : '',
+									'card_cd' : '',
+									'session_key' : '',
+									'enc_data' : '',
+									'kvp_pgid' : '',
+									'easy_pay_flg' : '',
+									'using_point' : '',
+									'kcp_layer_view' : 'N',
+									'expiry_yy' : '79',
+									'expiry_mm' : '12',
+									'cavv' : '',
+									'xid' : '',
+									'eci' : '',
+									'curr_code' : '410',
+									'card_no' : '',
+									'card_enc_no' : '',
+									'enc_cardno_yn' : 'N',
+									'kcp_wpay_yn' : directCardInfo.isISP ? 'N' : 'Y'
+								};
+
+								doDirectPay(formData, rsp.data.sandbox);
+
+								return;
+							}
+
+
+							var form = document.forms["payForm"],
+									vbankDue = _vbank_due(data.vbank_due),
+									formData = {
+										//common
+										'imp_uid': rsp.data.imp_uid,
+										'request_id': request_id,
+										'user_code': "imp75761852",
+										'pay_method': _pay_method(data.pay_method),
+										'ordr_idxx': rsp.data.use_self_order_id ? data.merchant_uid : rsp.data.imp_uid,
+										'good_name': data.name,
+										'good_mny': rsp.data.amount,
+										'buyr_name': data.buyer_name,
+										'buyr_mail': data.buyer_email,
+										'buyr_tel1': data.buyer_tel,
+										'buyr_tel2': data.buyer_tel,
+										'req_tx': "pay",
+										'site_cd': rsp.data.pg_id,
+										'site_name': data.company || "",
+										'quotaopt': _card_quota(data.display),
+										'currency': _currency(data.currency),
+										'eng_flag': data.language == 'en' ? "Y" : "N",
+										'module_type': "01",
+										'res_cd': "",
+										'res_msg': "",
+										'enc_info': "",
+										'enc_data': "",
+										'ret_pay_method': "",
+										'tran_cd': "",
+										'use_pay_method': "",
+										'ordr_chk': "",
+										'cash_yn': "",
+										'cash_tr_code': "",
+										'cash_id_info': "",
+										'disp_tax_yn': 'Y',
+										'vcnt_expire_term': vbankDue.days,
+										'vcnt_expire_term_time': vbankDue.hhmmss,
+										'good_expr': "0", //일회성 결제
+										'kcp_noint_quota': "",
+										'used_ticket': _used_ticket(data.pay_method)
+										/*'used_card_YN' 	: ,
+										'used_card' : ,
+										'used_card_CCXX' : ,
+										'save_ocb' : ,
+										'fix_inst' : ,
+										'wish_vbank_list' : ,
+										'complex_pnt_yn' : ,
+										'disp_tax_yn' : ,
+										'site_logo' : ,
+										'tax_flag' : ,
+										'comm_tax_mny' : ,
+										'comm_vat_mny' : ,
+										'comm_free_mny' : ,
+										'shop_user_id' : ,
+										'pt_memcorp_cd' : */
+									};
+
+							//submit URL 규칙 통일
+							form.action = "https://service.iamport.kr/kcp_payments/result/imp75761852/" + rsp.data.imp_uid + "/" + request_id;
+
+							//복합과세 처리
+							if (typeof data.tax_free == 'number') {
+								var vat = Math.round(Math.max(rsp.data.amount - data.tax_free, 0) / 11); //정부에서는 부가세액에 대해 반올림 권장
+
+								formData["tax_flag"] = "TG03";
+								formData["comm_tax_mny"] = rsp.data.amount - vat - data.tax_free;
+								formData["comm_vat_mny"] = vat;
+								formData["comm_free_mny"] = data.tax_free;
+							} else if (typeof data.vat == 'number') { //LEGACY : [2017-07-24] amount & vat 조합만으로는 정확한 복합과세금액을 산출하기 어렵다. amount & tax_free조합이어야 가능
+								var tax_free = Math.max(0, rsp.data.amount - 11 * data.vat);
+
+								formData["tax_flag"] = "TG03";
+								formData["comm_tax_mny"] = rsp.data.amount - data.vat - tax_free;
+								formData["comm_vat_mny"] = data.vat;
+								formData["comm_free_mny"] = tax_free; //1원 차이가 날 수 있음
+							}
+
+							if (rsp.data.enabled_cards) { //특정카드사 제한
+								formData["used_card_YN"] = "Y";
+								formData["used_card"] = rsp.data.enabled_cards;
+							}
+
+							if (rsp.data.interest_free_cards) { //상점분담무이자
+								formData["kcp_noint_quota"] = rsp.data.interest_free_cards; //kcp_noint 를 빈값으로지정하면 카드사이벤트 + 상점분담무이자 동시에 출력됨(무이자 표시)
+							}
+
+							if (data.escrow) { //에스크로 결제 처리
+								var escrowInfo = escrowProductInfo(data.kcpProducts);
+
+								if (!escrowInfo) return _response('', {
+									success: false,
+									request_id: request_id,
+									imp_uid: null,
+									merchant_uid: data.merchant_uid,
+									error_code: 'INVALID',
+									error_msg: '에스크로 결제의 경우 kcpProducts 파라메터가 반드시 세팅되어야 합니다.'
+								}, source, origin);
+
+								formData["escw_used"] = "Y";
+								formData["pay_mod"] = "Y"; //O로 하면 관리자 페이지에서 "에스크로 사용" 세팅했을 때 그대로 고정됨
+								formData["good_info"] = escrowInfo.good_info;
+								formData["deli_term"] = "03";
+								formData["bask_cntx"] = escrowInfo.bask_cntx;
+								formData["rcvr_name"] = data.buyer_name;
+								formData["rcvr_tel1"] = data.buyer_tel;
+								formData["rcvr_mail"] = data.buyer_email;
+								formData["rcvr_zipx"] = data.buyer_postcode;
+								formData["rcvr_add1"] = data.buyer_addr;
+							}
+
+							if (data.pay_method === 'payco') {
+								formData["payco_direct"] = "Y";
+							} else if (data.pay_method === 'samsung') {
+								formData["sspay_direct"] = "Y";
+							} else if (data.pay_method === 'kakaopay') {
+								formData["kakaopay_direct"] = "Y";
+							} else if (data.pay_method === 'naverpay') {
+								formData["naverpay_direct"] = "Y";
+								/*
+								} else if (data.pay_method === 'naverpay_point') {
+									formData["naverpay_direct"] = "Y";
+									formData["naverpay_point_direct"] = "Y";
+								*/
+							} else if (data.pay_method === 'lpay') {
+								formData["lpay_direct"] = "Y";
+							} else if (data.pay_method === 'ssgpay') {
+								formData["ssgpay_direct"] = "Y";
+							}
+
+							//키인결제창을 띄울지 여부
+							if (data.auth_mode === 'key-in') {
+								formData['keyin'] = "CERT";
+							}
+
+							//허용되는 bypass처리
+							_bypass(formData, data.bypass);
+
+							doPay(form, formData);
+						} else {
+							_response('', {
+								success: false,
+								request_id: request_id,
+								imp_uid: rsp.data.imp_uid,
+								merchant_uid: data.merchant_uid,
+								error_code: rsp.data.error_code,
+								error_msg: rsp.data.error_msg
+							}, source, origin);
+						}
+					});
+				}
+
+				if (usePromotionUI('imp75761852') && data.pay_method == 'card') {
+					openPaymentUI({
+						id: 'app',
+						request: payRequestData,
+						onCancel: function() {
+							_response('', {
+								success: false,
+								request_id: request_id,
+								imp_uid: null,
+								merchant_uid: data.merchant_uid,
+								error_code:'STOP',
+								error_msg:'결제를 취소하셨습니다.'
+							}, source, origin);
+						},
+						onSubmit: function (payOption, callback) {
+							payRequestData.card = payOption.card;
+							data.card = payOption.card;
+							payRequestData.promotion_id = payOption.promotionID;
+							prepareAjaxHandler(payRequestData, data, callback);
+						}
+					});
+				} else {
+					prepareAjaxHandler(payRequestData, data);
+				}
+			}
+		}
+
+		if (window.addEventListener) {  // all browsers except IE before version 9
+			window.addEventListener("message", on_message, false);
+		} else {
+			if (window.attachEvent) {   // IE before version 9
+				window.attachEvent("onmessage", on_message);
+			}
+		}
+
+	}).call({}, window);
+</script>
+
+<form id="payForm" name="payForm" method="post" action="https://service.iamport.kr/kcp_payments/result">
+	<input type="hidden" value="" name="pay_method">
+	<input type="hidden" value="" name="payco_direct"><!-- PAYCO HUB형 결제 -->
+	<input type="hidden" value="" name="ordr_idxx">
+	<input type="hidden" value="" name="good_name">
+	<input type="hidden" value="" name="good_mny">
+	<input type="hidden" value="" name="buyr_name">
+	<input type="hidden" value="" name="buyr_mail">
+	<input type="hidden" value="" name="buyr_tel1">
+	<input type="hidden" value="" name="buyr_tel2">
+	<input type="hidden" value="" name="req_tx">
+	<input type="hidden" value="" name="site_cd">
+	<input type="hidden" value="" name="site_name">
+	<input type="hidden" value="" name="ipgm_date">
+	<input type="hidden" value="" name="quotaopt">
+	<input type="hidden" value="" name="currency">
+	<input type="hidden" value="" name="module_type">
+	<input type="hidden" value="" name="res_cd">
+	<input type="hidden" value="" name="res_msg">
+	<input type="hidden" value="" name="enc_info">
+	<input type="hidden" value="" name="enc_data">
+	<input type="hidden" value="" name="ret_pay_method">
+	<input type="hidden" value="" name="tran_cd">
+	<input type="hidden" value="" name="use_pay_method">
+	<input type="hidden" value="" name="ordr_chk">
+	<input type="hidden" value="" name="cash_yn">
+	<input type="hidden" value="" name="cash_tr_code">
+	<input type="hidden" value="" name="cash_id_info">
+	<input type="hidden" value="" name="good_expr">
+	<input type="hidden" value="" name="used_card_YN">
+	<input type="hidden" value="" name="used_card">
+	<input type="hidden" value="" name="used_card_CCXX">
+	<input type="hidden" value="" name="save_ocb">
+	<input type="hidden" value="" name="fix_inst">
+	<input type="hidden" value="" name="kcp_noint">
+	<input type="hidden" value="" name="kcp_noint_quota">
+	<input type="hidden" value="" name="wish_vbank_list">
+	<input type="hidden" value="" name="vcnt_expire_term">
+	<input type="hidden" value="" name="vcnt_expire_term_time">
+	<input type="hidden" value="N" name="complex_pnt_yn">
+	<input type="hidden" value="Y" name="disp_tax_yn">
+	<input type="hidden" value="" name="site_logo">
+	<input type="hidden" value="" name="tax_flag">
+	<input type="hidden" value="" name="comm_tax_mny">
+	<input type="hidden" value="" name="comm_vat_mny">
+	<input type="hidden" value="" name="comm_free_mny">
+	<input type="hidden" value="" name="shop_user_id">
+	<input type="hidden" value="" name="pt_memcorp_cd">
+	<input type="hidden" value="" name="eng_flag">
+
+	<!-- 추가필드 -->
+	<input type="hidden" value="" name="skin_indx">
+	<input type="hidden" value="" name="used_ticket">
+
+	<!-- 에스크로 파라메터(필수) -->
+	<input type="hidden" name="escw_used" value="N"><!-- 에스크로 사용 여부 : 반드시 Y 로 설정 -->
+	<input type="hidden" name="pay_mod" value="N"><!-- 에스크로 결제처리 모드 : 에스크로: Y, 일반: N, KCP 설정 조건: O  -->
+	<input type="hidden" name="deli_term" value=""><!-- 배송 소요일 : 예상 배송 소요일을 입력 -->
+	<input type="hidden" name="bask_cntx" value=""><!-- 장바구니 상품 개수 : 장바구니에 담겨있는 상품의 개수를 입력(good_info의 seq값 참조) -->
+	<input type="hidden" name="good_info" value="">
+	<!-- 장바구니 상품 상세 정보 (자바 스크립트 샘플 create_goodInfo()가 온로드 이벤트시 설정되는 부분입니다.) -->
+	<!-- 에스크로 파라메터(선택) -->
+	<input type="hidden" name="rcvr_name" value="">
+	<input type="hidden" name="rcvr_tel1" value="">
+	<input type="hidden" name="rcvr_tel2" value="">
+	<input type="hidden" name="rcvr_mail" value="">
+	<input type="hidden" name="rcvr_zipx" value="">
+	<input type="hidden" name="rcvr_add1" value="">
+	<input type="hidden" name="rcvr_add2" value="">
+
+	<!-- 키인결제 호출 창-->
+	<input type="hidden" name="keyin" value="">
+	<!-- 삼성페이 다이렉트 호출 창 -->
+	<input type="hidden" name="sspay_direct" value="">
+	<!-- 카카오페이 다이렉트 호출 창 -->
+	<input type="hidden" name="kakaopay_direct" value="A"> <!-- kcp 웹표준결제창 내 간편결제 노출을 위해 value A로 설정(kcp가 사이트코드에 설정도 해주어야 노출된다) -->
+	<!-- 네이버페이 다이렉트 호출 창 -->
+	<input type="hidden" name="naverpay_direct" value="A"> <!-- kcp 웹표준결제창 내 간편결제 노출을 위해 value A로 설정(kcp가 사이트코드에 설정도 해주어야 노출된다) -->
+	<!-- 네이버페이 포인트 다이렉트 호출 창 -->
+	<!--
+	<input type="hidden" name="naverpay_point_direct" value=""/>
+	-->
+	<!-- LPay 다이렉트 호출 창 -->
+	<input type="hidden" name="lpay_direct" value="">
+	<!-- SSG페이 다이렉트 호출 창 -->
+	<input type="hidden" name="ssgpay_direct" value="">
+
+	<!-- 여기서부터 custom field(공통으로 모두 있어야 함) -->
+	<input type="hidden" name="imp_uid" value=""><!-- Payment.result()에서 공통화를 위해 imp_uid를 동일한 이름으로 한 번 더 받음 -->
+	<input type="hidden" name="request_id" value="">
+	<input type="hidden" name="user_code" value="imp75761852">
+</form>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+
+
+</body></html>

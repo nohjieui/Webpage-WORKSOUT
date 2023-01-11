@@ -10,11 +10,14 @@
 div{
     /* border: 1px solid red; */
     box-sizing: border-box;
+    
 }
 .wrap{
     width: 1903px;
     height: 3290px;
     margin: auto;
+    
+    
 }
 .wrap>div{width: 100%;}
 /* ------------------------- popup ------------------------- */
@@ -32,7 +35,20 @@ div{
 }
 
 /* ------------------------- header ------------------------- */
-#header{height: 60px;  padding: 10px 32px;}
+#h{
+    height: 96px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+}
+#header{
+    height: 60px;
+    padding: 10px 32px;
+
+}
 #header>div{
     height: 100%;
     float: left;
@@ -104,7 +120,11 @@ div{
 
 
 /* ------------------------- navigator ------------------------- */
-#navigator{height: 36px;}
+#navigator{
+    width: 100%;
+    height: 36px; 
+
+}
 #navi{
     /* border: 1px solid blue; */
     margin: 0;
@@ -128,7 +148,7 @@ div{
 
     line-height: 35px;
 }
-#navi a::after{
+#navi a:after{
     display:block;/*a요소를 블록 요소라고 선언*/
     content: '';/*comtent안은 밑줄 디자인을 위해 비워두세요.*/
     border-bottom: solid 1px black;
@@ -137,24 +157,95 @@ div{
 }
 #navi a:hover:after {
     transform: scaleX(0.6);/*a 속성에 hover시 after를 기존 크기로 변경*/
- }
+}
+
+#navi>li>ul{
+    border: 1px solid blue;
+    list-style-type: none;
+    background-color: white;
+
+    /* 평소에 가려주다가 마우스가 올라가는 순간 펼쳐지는 효과부여 1단계 */
+    /* display: none; */
+    /* display: flex; */
+}
+#navi>li>a:hover+ul{
+    /* 평소에 가려주다가 마우스가 올라가는 순간 펼쳐지는 효과부여 2단계 */
+    /* display: block; */
+}
+#navi>li>ul:hover{
+     /* 서브메뉴에도 마우스가 올라갈 때 유지가 되게끔 속성 부여 3단계 */
+    /* display: block; */
+}
+#seasonoff{
+    /* width: 1903px; */
+    height: 500px;
+    
+}
 
 /* ------------------------- content ------------------------- */
 #content{height: 3100px;}
 #content>div{width: 100%;}
 /* content_img */
-#content_img{height: 3052px;}
+#content_img{
+    height: 3052px;
+    /* border: 1px solid blue; */
+    margin: auto;
+}
 #content_img_1 img{
     width: 458px;
     height: 596px;
+    
 }
+
 #content_img_1{
-    border: 1px solid blue;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+
+    
+}
+.c_img{
+    position: relative;
+}
+.c_img>div{
+    text-align: center;
+}
+.c_text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    background-color: #3b3634;
+    border: 1px solid #56514f;
+    font-size: 11px;
+    padding: 2px 12px;
+    display: none;
+}
+.c_img>a:hover+div{
+    display: block;
 }
 
 
 /* content_more */
-#content_more{height: 48px;}
+#content_more{
+    height: 48px; 
+    text-align: center;
+    line-height: 45px;
+    
+}
+#content_more>input{
+    background-color: white;
+    border: 0px;
+    font-size: 12px;
+    color: gray;
+}
 
 /* ------------------------- footer ------------------------- */
 #footer{height: 58px;}
@@ -185,4 +276,16 @@ div{
     margin: 10px;
     vertical-align: middle;
     
+}
+
+/* ------------------------- fiexd ------------------------- */
+#fiexd img{
+    width: 50px;
+    height: 50px;
+}
+#fiexd{
+    position: fixed;
+    left: 1820px;
+    bottom: 50px;
+
 }
