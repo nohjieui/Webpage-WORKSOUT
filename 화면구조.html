@@ -13,50 +13,47 @@
         .wrap{
             width: 1903px;
             height: 3290px;
-            margin: auto;
+            /* margin: auto; */
         }
         .wrap>div{width: 100%;}
-        /* -------------------- popup -------------------- */
+
+        /* ------------------------- popup ------------------------- */
         #popup{height: 36px;}
 
-        /* -------------------- header -------------------- */
-        #header{height: 60px;}
-        #header>div{
-            height: 100%;
-            float: left;
-        }
+        /* ------------------------- header ------------------------- */
+        #header{height: 96px;}
+        #head{height: 60%;}
+        #head>div{height: 100%; float: left;}
         #header_1{width: 30%;}
         #header_2{width: 40%;}
         #header_3{width: 30%;}
 
-        /* -------------------- navigator -------------------- */
-        #navigator{height: 36px;}
-
-        /* -------------------- content -------------------- */
+        /* navigator */
+        #navigator{height: 40%;}
+        /* ------------------------- content ------------------------- */
         #content{height: 3100px;}
         #content>div{width: 100%;}
-        #content_img{height: 3052px;}
-        #content_more{height: 48px;}
+        #content_img{height: 3050px;}
+        #content_more{height: 50px;}
 
-        /* -------------------- footer -------------------- */
+        /* ------------------------- footer ------------------------- */
         #footer{height: 58px;}
-        #footer>div{
-            height: 100%;
-            float: left;
-        }
+        #footer>div{height: 100%; float: left;}
         #footer_1{width: 60%;}
-        #footer_2{width: 40%;}
+        #footer_2{width: 40%;} 
     </style>
 </head>
 <body>
     <div class="wrap">
         <div id="popup"></div>
         <div id="header">
-            <div id="header_1"></div>
-            <div id="header_2"></div>
-            <div id="header_3"></div>
+            <div id="head">                
+                <div id="header_1"></div>
+                <div id="header_2"></div>
+                <div id="header_3"></div>
+            </div>
+            <div id="navigator"></div>
         </div>
-        <div id="navigator"></div>
         <div id="content">
             <div id="content_img"></div>
             <div id="content_more"></div>
