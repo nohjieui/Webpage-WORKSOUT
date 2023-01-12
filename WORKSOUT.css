@@ -47,7 +47,7 @@ div{
 #header{
     height: 60px;
     padding: 10px 32px;
-
+    border-bottom: 0.1px solid rgba(243,244,246);
 }
 #header>div{
     height: 100%;
@@ -125,7 +125,7 @@ div{
 #navigator{
     width: 100%;
     height: 36px; 
-
+    border-bottom: 0.1px solid rgba(243,244,246);
 }
 #navi{
     /* border: 1px solid blue; */
@@ -170,6 +170,7 @@ div{
 
     display: none;
 }
+
 #seasonoff_title{
     margin: 10px 40px;
 
@@ -253,7 +254,7 @@ div{
     height: 48px; 
     text-align: center;
     line-height: 45px;
-    
+    border-bottom: 0.1px solid rgba(243,244,246);
 }
 #content_more>input{
     background-color: white;
@@ -278,6 +279,7 @@ div{
     box-sizing: border-box;
     color: gray;
     padding: 10px 20px;
+    letter-spacing: 0.4px; /* 글자사이 간격 조정 */
 }
 
 /* footer_2 */
@@ -287,7 +289,7 @@ div{
 }
 #footer_2>a{
     text-decoration: none;
-    color: gray;
+    color: #888;
     /* font-weight: 600; */
     vertical-align: middle;
 }

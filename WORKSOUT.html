@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="workout.css">
+    <title>WORKSOUT</title>
+    <link rel="stylesheet" href="WORKSOUT.css">
     
 </head>
 <body>
@@ -41,26 +41,26 @@
             </div>
             <div id="navigator">
                 <ul id="navi">
-                    <li><a href="">시즌오프</a></li>
-                    <li><a href="">남성</a></li>
-                    <li><a href="">여성</a></li>
-                    <li><a href="">생활</a></li>
-                    <li><a href="">브랜드</a></li>
+                    <li><a>시즌오프</a></li>
+                    <li><a>남성</a></li>
+                    <li><a>여성</a></li>
+                    <li><a>생활</a></li>
+                    <li><a>브랜드</a></li>
                 </ul>
             </div>
-            <div class="menu_pan">
+            <div class="menu_pan" id="menu_0">
                 <div id="seasonoff_title"><a href="">시즌오프 <br> 최대 40%</a></div>
-                <ul class="menu_category">
+                <ul class="menu_category" >
                     <li class="category"><a href="">전체</a></li>
                     <li class="category"><a href="">자켓</a></li>
                     <li class="category"><a href="">스웨트 & 니트</a></li>
-                    <li class="category"><a href="">티셔츠</a></li>
                     <li class="category"><a href="">셔츠</a></li>
+                    <li class="category"><a href="">티셔츠</a></li>
                     <li class="category"><a href="">스커트</a></li>
                     <li class="category"><a href="">바지</a></li>
-                    <li class="category"><a href="">반바지</a></li>
                 </ul>
-                <ul class="menu_category">
+                <ul class="menu_category" >
+                    <li class="category"><a href="">반바지</a></li>
                     <li class="category"><a href="">수영복 & 언더웨어</a></li>
                     <li class="category"><a href="">신발</a></li>
                     <li class="category"><a href="">모자</a></li>
@@ -69,7 +69,86 @@
                     <li class="category"><a href="">생활</a></li>
                 </ul>
             </div>
+            <div class="menu_pan" id="menu_1">
+                <ul class="menu_category" >
+                    <li class="category"><a href="">자켓</a></li>
+                    <li class="category"><a href="">스웨트 & 니트</a></li>
+                    <li class="category"><a href="">셔츠</a></li>
+                    <li class="category"><a href="">티셔츠</a></li>
+                    <li class="category"><a href="">바지</a></li>
+                    <li class="category"><a href="">반바지</a></li>
+                </ul>
+                <ul class="menu_category" >
+                    <li class="category"><a href="">수영복 & 언더웨어</a></li>
+                    <li class="category"><a href="">신발</a></li>
+                    <li class="category"><a href="">모자</a></li>
+                    <li class="category"><a href="">가방</a></li>
+                    <li class="category"><a href="">악세사리</a></li>
+                </ul>
+            </div>
+            <div class="menu_pan" id="menu_2">
+                <ul class="menu_category" >
+                    <li class="category"><a href="">자켓</a></li>
+                    <li class="category"><a href="">스웨트 & 니트</a></li>
+                    <li class="category"><a href="">셔츠</a></li>
+                    <li class="category"><a href="">티셔츠</a></li>
+                    <li class="category"><a href="">스커트</a></li>
+                    <li class="category"><a href="">바지</a></li>
+                </ul>
+                <ul class="menu_category" >
+                    <li class="category"><a href="">반바지</a></li>
+                    <li class="category"><a href="">수영복 & 언더웨어</a></li>
+                    <li class="category"><a href="">신발</a></li>
+                    <li class="category"><a href="">모자</a></li>
+                    <li class="category"><a href="">가방</a></li>
+                    <li class="category"><a href="">악세사리</a></li>
+                </ul>
+            </div>
+            <div class="menu_pan" id="menu_3">
+                <ul class="menu_category" >
+                    <li class="category"><a href="">홈데코</a></li>
+                    <li class="category"><a href="">뷰티</a></li>
+                    <li class="category"><a href="">보드</a></li>
+                    <li class="category"><a href="">책</a></li>
+                    <li class="category"><a href="">기타</a></li>
+                </ul>
+            </div>
+            <div class="menu_pan" id="menu_4">
+                <ul class="menu_category" >
+                    <li class="category"><a href="">CARHARTT WIP</a></li>
+                    <li class="category"><a href="">CAV EMPT</a></li>
+                    <li class="category"><a href="">DEUS EX MACHINA</a></li>
+                    <li class="category"><a href="">HUMAN MADE</a></li>
+                    <li class="category"><a href="">JORDAN</a></li>
+                    <li class="category"><a href="">NIKE</a></li>
+                    <li class="category"><a href="">OBEY</a></li>
+                    <li class="category"><a href="">VANS</a></li>
+                </ul>
+            </div>
         </div>
+        <script>
+            let navis = document.querySelectorAll("#navi>li>a");
+            let menus = document.querySelectorAll("div[id^=menu]");
+
+            for(let i = 0; i<navis.length; i++){
+                navis[i].addEventListener('click', function(){
+                    let menu = document.querySelector("#menu_"+i);
+                    
+                    let bools = menu.style.display == 'block';
+
+                    for(let j=0; j<menus.length; j++){
+                        menus[j].style.display = 'none';
+                    }
+                    if(bools){
+                        menu.style.display = 'none';
+
+                    }else{
+                        menu.style.display = 'block';
+                    }
+                })
+            }
+
+        </script>    
         <div id="content">
             <div id="content_img">
                 <div id="content_img_1">
